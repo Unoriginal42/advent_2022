@@ -1,0 +1,5 @@
+// Day 1 2022 
+l:read0`:input1.txt;
+calories:"J"$","vs/: ",|,"vs ","sv string (`$"|")^`$l;
+elfs:(`$"elf_",/:string til count calories)!calories;
+sum 3#desc distinct value sum each elfs
