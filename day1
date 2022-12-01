@@ -2,4 +2,7 @@
 l:read0`:input1.txt;
 calories:"J"$","vs/: ",|,"vs ","sv string (`$"|")^`$l;
 elfs:(`$"elf_",/:string til count calories)!calories;
+// soln 1
+max sum each elfs
+// soln 2 
 sum 3#desc distinct value sum each elfs
