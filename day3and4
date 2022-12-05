@@ -1,0 +1,18 @@
+// day3
+common:{distinct(inter). x("j"$c%2)cut til c:count x}each read0`:inp3.txt
+map:{x!1+til count x}`$1 cut .Q.a,.Q.A;
+//soln1
+sum map `$common
+
+// soln2
+{distinct (inter/)x}each 3 cut read0`:test.txt
+
+
+
+// day4
+nums:"J"$"-" vs/:/:","vs/: read0`:inp4.txt;
+lists:{,'[;x[;1]]x[;0]+til each x[;1]-x[;0]}each nums;
+// soln1
+sum {i:first where max[c]=c:count each x;all first x[0 1 except i]in x i}each lists
+// soln2
+sum {i:first where max[c]=c:count each x;any first x[0 1 except i]in x i}each lists
