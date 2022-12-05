@@ -1,0 +1,14 @@
+l:read0`:inpu5.txt;
+lr:-1_first[where ""~/:l]#l;
+cmds:1_first[where ""~/:l]_l;
+cr:trim lr @\: -3#/: til each where[" "=last lr],count last lr;
+c_nums:{"J"$trim raze "to "vs/:"from"vs last "move"vs x}each cmds;
+
+stack:{y:y-0 1 1;l:reverse y[0]#x y 1;x[y 1]:y[0]_ x y 1;x[y 2]:l,x y 2;x}/[flip[`$cr]except\:`;c_nums];
+// soln1
+except[;"[]"]raze string first each stack
+
+// soln2
+// I could add an if/else like $[z;;reverse] but im too lazy
+stack2:{y:y-0 1 1;l:y[0]#x y 1;x[y 1]:y[0]_ x y 1;x[y 2]:l,x y 2;x}/[flip[`$cr]except\:`;c_nums];
+except[;"[]"]raze string first each stack2
